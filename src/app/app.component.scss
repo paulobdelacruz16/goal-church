@@ -1,0 +1,87 @@
+.goal-church-main {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  color: gray;
+  background: url(../assets/images/body-bg.png) repeat fixed;
+  display: block;
+
+  .container-wrap {
+    max-width: 1060px;
+    margin: 0 auto;
+    background: #fff;
+  }
+
+  .banner {
+    #fh5co-logo {
+      font-size: 45px;
+      margin: 0;
+      padding: 1em 0;
+      font-family: "Libre Baskerville", serif;
+      display: block;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+      a {
+        color: #658361;
+        padding: 5px 10px;
+        text-decoration: none;
+      }
+    }
+  }
+  .navigation-bar {
+    ul {
+      padding: 20px 0;
+      margin: 0;
+      li {
+        font-family: "Source Sans Pro", sans-serif;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: inline;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 600;
+        a {
+          position: relative;
+          font-size: 13px;
+          padding: 30px 20px;
+          color: rgba(0, 0, 0, 0.8);
+          -webkit-transition: 0.5s;
+          -o-transition: 0.5s;
+          transition: 0.5s;
+          text-decoration: none;
+          
+        }
+      }
+      .active{
+        a{
+          color: #658361;
+        }
+      }
+      li.active > a:after {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+
+      a:after {
+        position: absolute;
+        top: 6px;
+        left: 0;
+        right: 0;
+        content: "";
+        width: 50%;
+        height: 2px;
+        background: #658361;
+        margin: 0 auto;
+        opacity: 0;
+        -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+        transition: transform 0.3s, opacity 0.3s;
+        -webkit-transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 10px, 0);
+      }
+
+      
+    }
+  }
+}
