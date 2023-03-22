@@ -10,6 +10,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { DonateComponent } from './components/donate/donate.component';
 import { SermonsComponent } from './components/sermons/sermons.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { AnimateDirective } from './directive/animation-on-view.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     NewsComponent,
     ContactComponent,
     DonateComponent,
-    SermonsComponent
+    SermonsComponent,
+    AnimateDirective
   ],
   imports: [
     BrowserModule,
