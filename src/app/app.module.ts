@@ -11,6 +11,12 @@ import { DonateComponent } from './components/donate/donate.component';
 import { SermonsComponent } from './components/sermons/sermons.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { AnimateDirective } from './directive/animation-on-view.directive';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { TextCarouselComponent } from './components/partials/text-carousel/text-carousel.component';
+import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { BoxItemListComponent  } from './components/partials/box-item-list/box-item-list.component';
+
+
 
 @NgModule({
   declarations: [
@@ -20,13 +26,20 @@ import { AnimateDirective } from './directive/animation-on-view.directive';
     ContactComponent,
     DonateComponent,
     SermonsComponent,
-    AnimateDirective
+    AnimateDirective,
+    TextCarouselComponent,
+    BoxItemListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CarouselModule
+    CarouselModule,
+    ModalModule.forRoot()
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
   ],
   providers: [],
   bootstrap: [AppComponent]

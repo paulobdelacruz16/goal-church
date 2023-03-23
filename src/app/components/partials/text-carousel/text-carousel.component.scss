@@ -1,0 +1,30 @@
+.carousel-section-main {
+  padding: 5em 3em;
+  clear: both;
+  background: #658361;
+
+  .banner-image {
+    min-height: 396px;
+  }
+  .carousel-item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 500px;
+    position: relative;
+  }
+  
+  .carousel-caption {
+    right: 0%;
+    left: 33%;
+    padding-top: 1.25rem;
+    bottom: 9.25rem;
+  }
+
+  .carousel-control-prev{
+    display: none;
+  }
+  .carousel-control-next{
+    display: none;
+  }
+}
