@@ -1,0 +1,53 @@
+<div class="carousel-section">
+  <carousel [isAnimated]="true" [interval]="myInterval">
+    <slide *ngFor="let item of itemListData4">
+      <div class="banner-image">
+        <img
+          [src]="item.image"
+          alt="first slide"
+          style="display: block; width: 100%"
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <div class="col-md-6 col-md-offset-3 text-center">
+            <div class="slider-text">
+              <div class="slider-text-inner">
+                <h1>{{ item.description }}</h1>
+                <p>
+                  <a (click)="openModal(template)"
+                    class="btn btn-primary btn-demo popup-vimeo">
+                    <i class="icon-play4"></i> Watch Video</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </slide>
+  </carousel>
+</div>
+<ng-template #template>
+  <div class="modal-header">
+    <button
+      type="button"
+      class="btn-close close pull-right"
+      aria-label="Close"
+      (click)="modalRef?.hide()"
+    >
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="embed-container">
+      <iframe
+        src="https://www.youtube.com/embed/KguZit1F8bk"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write;
+   encrypted-media; gyroscope;
+     picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</ng-template>

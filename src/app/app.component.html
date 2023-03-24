@@ -1,26 +1,9 @@
 <div class="goal-church-main container-wrap">
   <div class="container-wrap">
-    <div class="banner">
-      <div class="col-md-12 col-offset-0 text-center">
-        <div id="fh5co-logo"><a href="index.html">GOAL Church</a></div>
-      </div>
-    </div>
-    <div class="navigation-bar">
-      <div class="col-md-12 col-md-offset-0 text-center menu-1">
-        <ul>
-          <li
-            *ngFor="let item of navlist; index as id"
-            [ngClass]="{ active: id === selectedNavId }"
-          >
-            <a (click)="clickNavigation(id)" routerLink="/{{ item.src }}">{{
-              item.name
-            }}</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <app-header></app-header>
     <div class="main-body">
       <router-outlet></router-outlet>
     </div>
+    <app-footer></app-footer>
   </div>
 </div>

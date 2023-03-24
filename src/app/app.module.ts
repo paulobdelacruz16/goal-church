@@ -15,6 +15,10 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { TextCarouselComponent } from './components/partials/text-carousel/text-carousel.component';
 import { NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BoxItemListComponent  } from './components/partials/box-item-list/box-item-list.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { VideoCarouselComponent } from './components/partials/video-carousel/video-carousel.component';
+
 
 
 
@@ -28,7 +32,10 @@ import { BoxItemListComponent  } from './components/partials/box-item-list/box-i
     SermonsComponent,
     AnimateDirective,
     TextCarouselComponent,
-    BoxItemListComponent
+    BoxItemListComponent,
+    FooterComponent,
+    HeaderComponent,
+    VideoCarouselComponent
   ],
   imports: [
     BrowserModule,

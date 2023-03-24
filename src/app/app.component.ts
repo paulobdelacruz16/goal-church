@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'goal-church-app';
-  constructor() {}
+  constructor(private modalService: BsModalService) {}
   navlist: any
   selectedNavId: any
-
+  modalRef?: BsModalRef;
   ngOnInit(): void {
      this.navlist = [
       { name: 'Home', src: "home" },
@@ -26,5 +27,10 @@ export class AppComponent implements OnInit {
 
   clickNavigation(value: number){
     this.selectedNavId = value;
+  }
+
+  openModal(template: TemplateRef<any>) {
+    console.log('test');
+    this.modalRef = this.modalService.show(template);
   }
 }

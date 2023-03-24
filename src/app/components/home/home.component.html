@@ -1,56 +1,4 @@
-<div class="carousel-section">
-  <carousel [isAnimated]="true" [interval]="myInterval">
-    <slide>
-      <div class="banner-image">
-        <img
-          src="https://drive.google.com/uc?id=1W-JrHHefjnjIKlbUEJdz_6pvOr7Jqquj"
-          alt="first slide"
-          style="display: block; width: 100%"
-        />
-        <div class="carousel-caption d-none d-md-block">
-          <div class="col-md-6 col-md-offset-3 text-center">
-            <div class="slider-text">
-              <div class="slider-text-inner">
-                <h1>Living &amp; Sharing the Gospel of God</h1>
-                <h2>
-                  Free html5 templates Made by
-                  <a href="http://freehtml5.co/" target="_blank"
-                    >freehtml5.co</a
-                  >
-                </h2>
-                <p>
-                  <a
-                    class="btn btn-primary btn-demo popup-vimeo"
-                    href="https://vimeo.com/channels/staffpicks/93951774"
-                  >
-                    <i class="icon-play4"></i> Watch Video</a
-                  >
-                  <a class="btn btn-primary btn-learn"
-                    >Join us here! <i class="icon-arrow-right3"></i
-                  ></a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </slide>
-    <slide>
-      <img
-        src="https://drive.google.com/uc?id=188AFlkyg_zcGSfWA0zCdomOoEVT3VROW"
-        alt="second slide"
-        style="display: block; width: 100%"
-      />
-    </slide>
-    <slide>
-      <img
-        src="https://drive.google.com/uc?id=1IrnRAMxNjqznaUhoj3qvwXjd5ndmk7vZ"
-        alt="third slide"
-        style="display: block; width: 100%"
-      />
-    </slide>
-  </carousel>
-</div>
+<app-video-carousel></app-video-carousel>
 <div class="banner-text-section">
   <div class="row animate-box fadeInUp animated-fast">
     <div class="row animate-box">
@@ -61,38 +9,11 @@
     </div>
   </div>
 </div>
-<!-- <div class="text-list-section">
-  <div class="row animate-box">
-    <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-      <h2>Services</h2>
-      <p>
-        Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus
-        alias autem provident. Odit ab aliquam dolor eius.
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    <div
-      class="col-md-4 animate-box"
-      *ngFor="let item of itemListData; index as id"
-    >
-      <div class="services">
-        <a href="#" class="img-holder" *ngIf="item.image"
-          ><img class="img-responsive" [src]="item.image" alt="{{ item.name }}"
-        /></a>
-        <div class="desc">
-          <h3>
-            <a href="#">{{ item.name }}</a>
-          </h3>
-          <p>{{ item.description }}</p>
-          <a [href]="item.url">Read More <i class="fa fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 
-<app-box-item-list [itemListData] = itemListData1 numberofItem = 4></app-box-item-list>
+<app-box-item-list
+  [itemListData]="itemListData1"
+  numberofItem="4"
+></app-box-item-list>
 
 <div class="video-list-section">
   <div class="row animate-box">
@@ -122,58 +43,41 @@
       </div>
     </div>
   </div>
-<ng-template #template>
-  <div class="modal-header">
-    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
-      <span aria-hidden="true" class="visually-hidden">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <div class="embed-container">
-      <iframe src="https://www.youtube.com/embed/KguZit1F8bk"
-      title="YouTube video player"
-      frameborder="0"
-     allow="accelerometer; autoplay; clipboard-write;
-     encrypted-media; gyroscope;
-       picture-in-picture; web-share" allowfullscreen></iframe>
+  <ng-template #template>
+    <div class="modal-header">
+      <button
+        type="button"
+        class="btn-close close pull-right"
+        aria-label="Close"
+        (click)="modalRef?.hide()"
+      >
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
     </div>
-  </div>
-</ng-template>
-</div>
-<app-text-carousel>
-</app-text-carousel>
-
-<app-box-item-list [itemListData] = itemListData2 numberofItem = 4></app-box-item-list>
-
-<app-box-item-list [itemListData] = itemListData3  numberofItem = 3></app-box-item-list>
-
-<div class="footer">
-  <div class="container-wrap">
-    <footer id="fh5co-footer" role="contentinfo">
-      <div class="row">
-        <div class="col-md-4 text-center">
-          <h3>Real St. Del Monte Heights, Kaypian, , San Jose del Monte, Philippines</h3>
-        </div>
-        <div class="col-md-4 text-center">
-          <h2><a href="#">Goal Church</a></h2>
-        </div>
-        <div class="col-md-4 text-center">
-            <ul class="fh5co-social-icons">
-              <i class="fa fa-facebook" aria-hidden="true"><a href="#"></a></i>
-              <i class="fa fa-youtube-play" aria-hidden="true"><a href="#"></a></i>
-            </ul>
-        </div>
+    <div class="modal-body">
+      <div class="embed-container">
+        <iframe
+          src="https://www.youtube.com/embed/KguZit1F8bk"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write;
+     encrypted-media; gyroscope;
+       picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </div>
-  
-  
-      <div class="row copyright">
-        <div class="col-md-12 text-center">
-          <p>
-            <small class="block">&copy; 2023 Goal Church. All Rights Reserved.</small> 
-          </p>
-        </div>
-      </div>
-    </footer>
-  </div>
+    </div>
+  </ng-template>
 </div>
 
+<app-text-carousel> </app-text-carousel>
+
+<app-box-item-list
+  [itemListData]="itemListData2"
+  numberofItem="4"
+></app-box-item-list>
+
+<app-box-item-list
+  [itemListData]="itemListData3"
+  numberofItem="3"
+></app-box-item-list>
