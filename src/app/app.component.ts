@@ -1,5 +1,6 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { Meta } from '@angular/platform-browser';  
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 })
 export class AppComponent implements OnInit {
   title = 'goal-church-app';
-  constructor(private modalService: BsModalService) {}
+  constructor(private meta: Meta) {}
   navlist: any
   selectedNavId: any
   modalRef?: BsModalRef;
@@ -23,14 +24,16 @@ export class AppComponent implements OnInit {
       { name: 'Donate', src: "donate" }
     ];
     this.selectedNavId = 0;
+
+    this.meta.addTags([
+      { property: 'og:title', content: 'Goal Church' },
+      { property: 'og:description', content: 'Welcome to Goal Church Website!' },
+      { property: 'og:image', content: 'https://www.goalchurch.com/assets/images//goalchurch_logo.png'},
+      { property: 'og:url', content: 'https://www.goalchurch.com'},
+    ]); 
   }
 
   clickNavigation(value: number){
     this.selectedNavId = value;
-  }
-
-  openModal(template: TemplateRef<any>) {
-    console.log('test');
-    this.modalRef = this.modalService.show(template);
   }
 }

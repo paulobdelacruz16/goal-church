@@ -1,19 +1,20 @@
 import { Component,TemplateRef, OnInit, ViewEncapsulation, Input } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-video-carousel',
-  templateUrl: './video-carousel.component.html',
-  styleUrls: [ './video-carousel.component.scss' ],
+  selector: 'app-box-list-video',
+  templateUrl: './box-list-video.component.html',
+  styleUrls: [ './box-list-video.component.scss' ],
   encapsulation: ViewEncapsulation.None,
 })
 
-export class VideoCarouselComponent implements OnInit {
+export class BoxListVideoComponent implements OnInit {
   modalRef?: BsModalRef;
-  constructor(private _sanitizer: DomSanitizer,private modalService: BsModalService) {}
   safeURL: any;
   selectedVideoURL:any;
+
+  constructor(private _sanitizer: DomSanitizer, private modalService: BsModalService){}
 
   @Input() itemListData:any;
   ngOnInit(): void {
@@ -24,8 +25,4 @@ export class VideoCarouselComponent implements OnInit {
     this.modalRef = this.modalService.show(template);
     this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl(this.selectedVideoURL);
   }
-
-
-
-  
 }

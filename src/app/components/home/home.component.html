@@ -15,69 +15,11 @@
   numberofItem="4"
 ></app-box-item-list>
 
-<div class="video-list-section">
-  <div class="row animate-box">
-    <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-      <h2>Our Sermons</h2>
-      <p>
-        Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus
-        alias autem provident. Odit ab aliquam dolor eius.
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    <div
-      class="col-md-4 animate-box"
-      *ngFor="let item of videoListData; index as id"
-    >
-      <div class="sermon-entry">
-        <div class="sermon" style="background-image: url({{item.image}});">
-          <div class="play">
-            <a class="popup-vimeo" (click)="openModal(template)"
-              ><i class="fa fa-play" aria-hidden="true"></i
-            ></a>
-          </div>
-        </div>
-        <h3>Soul Winning</h3>
-        <span>Pstr. John Doe</span>
-      </div>
-    </div>
-  </div>
-  <ng-template #template>
-    <div class="modal-header">
-      <button
-        type="button"
-        class="btn-close close pull-right"
-        aria-label="Close"
-        (click)="modalRef?.hide()"
-      >
-        <span aria-hidden="true" class="visually-hidden">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <div class="embed-container">
-        <iframe
-          src="https://www.youtube.com/embed/KguZit1F8bk"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write;
-     encrypted-media; gyroscope;
-       picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-  </ng-template>
-</div>
+<app-box-list-video [itemListData]="videoListData"></app-box-list-video>
 
 <app-text-carousel> </app-text-carousel>
 
 <app-box-item-list
   [itemListData]="itemListData2"
   numberofItem="4"
-></app-box-item-list>
-
-<app-box-item-list
-  [itemListData]="itemListData3"
-  numberofItem="3"
 ></app-box-item-list>

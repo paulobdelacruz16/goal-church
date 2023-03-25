@@ -1,5 +1,5 @@
 <div class="carousel-section">
-  <carousel [isAnimated]="true" [interval]="myInterval">
+  <carousel [isAnimated]="true">
     <slide *ngFor="let item of itemListData">
       <div class="banner-image">
         <img
@@ -13,7 +13,7 @@
               <div class="slider-text-inner">
                 <h1>{{ item.description }}</h1>
                 <p>
-                  <a (click)="openModal(template)"
+                  <a (click)="openModal(template, item)"
                     class="btn btn-primary btn-demo popup-vimeo">
                     <i class="icon-play4"></i> Watch Video</a
                   >
@@ -40,7 +40,7 @@
   <div class="modal-body">
     <div class="embed-container">
       <iframe
-        src="https://www.youtube.com/embed/KguZit1F8bk"
+        [src]="safeURL"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write;

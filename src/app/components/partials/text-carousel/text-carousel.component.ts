@@ -13,17 +13,17 @@ export class TextCarouselComponent implements OnInit {
   ngOnInit(): void {
      this.ItemsList =  [
       {
-        name:"Bible verse 1",
-        description:"Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.",
+        name:"Philippians 4:7",
+        description:"And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus.",
       },
       {
-        name:"Bible verse 2",
-        description:"Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.",
+        name:"2 Corinthians 5:7",
+        description:"For we live by faith, not by sight",
  
       },
       {
-        name:"Bible verse 3",
-        description:"Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.",
+        name:"1 Timothy 6:12",
+        description:"Fight the good fight of the faith. Take hold of the eternal life to which you were called when you made your good confession in the presence of many witnesses.",
 
       },
     ];

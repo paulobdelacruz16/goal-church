@@ -18,6 +18,7 @@ import { BoxItemListComponent  } from './components/partials/box-item-list/box-i
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { VideoCarouselComponent } from './components/partials/video-carousel/video-carousel.component';
+import { BoxListVideoComponent } from './components/partials/box-list-video/box-list-video.component';
 
 
 
@@ -35,7 +36,8 @@ import { VideoCarouselComponent } from './components/partials/video-carousel/vid
     BoxItemListComponent,
     FooterComponent,
     HeaderComponent,
-    VideoCarouselComponent
+    VideoCarouselComponent,
+    BoxListVideoComponent
   ],
   imports: [
     BrowserModule,
