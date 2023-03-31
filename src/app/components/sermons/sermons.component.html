@@ -11,3 +11,14 @@
     </div>
   </section>
 </div>
+<carousel>
+  <slide *ngFor="let item of testData.data">
+    <img src="{{ item.image }}" alt="first slide" style="display: block; width: 100%;">
+  </slide>
+  <!-- <slide>
+    <img src="https://drive.google.com/uc?id=1zGMw_SK67c2Op1jFSWOyBZ66mnBrfBMS" alt="second slide" style="display: block; width: 100%;">
+  </slide>
+  <slide>
+    <img src="https://drive.google.com/uc?id=1KwJcJ7Mu1I3TpMWkFkI_BlXutGGHLzzQ" alt="third slide" style="display: block; width: 100%;">
+  </slide> -->
+</carousel>
